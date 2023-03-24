@@ -7,21 +7,21 @@ import { getRandomInRange } from 'src/utils';
 import { ImageMetadata } from './image.interface';
 
 const stubData = [
-  { id: 1, uri: 'public/1.png', species: 'dog' },
-  { id: 2, uri: 'public/2.png', species: 'cat' },
-  { id: 3, uri: 'public/3.png', species: 'duck' },
-  { id: 4, uri: 'public/4.png', species: 'dog' },
-  { id: 5, uri: 'public/5.png', species: 'dog' },
-  { id: 6, uri: 'public/6.png', species: 'dog' },
-  { id: 7, uri: 'public/7.png', species: 'dog' },
-  { id: 8, uri: 'public/8.png', species: 'cat' },
-  { id: 9, uri: 'public/9.png', species: 'cat' },
-  { id: 10, uri: 'public/10.png', species: 'cat' },
-  { id: 11, uri: 'public/11.png', species: 'cat' },
-  { id: 12, uri: 'public/12.png', species: 'duck' },
-  { id: 13, uri: 'public/13.png', species: 'duck' },
-  { id: 14, uri: 'public/14.png', species: 'duck' },
-  { id: 15, uri: 'public/15.png', species: 'duck' },
+  { id: 1, uri: 'assets/dogs/dog1.jpg', species: 'dog' },
+  { id: 2, uri: 'assets/dogs/dog2.jpg', species: 'dog' },
+  { id: 3, uri: 'assets/dogs/dog3.jpg', species: 'dog' },
+  { id: 4, uri: 'assets/dogs/dog4.jpg', species: 'dog' },
+  { id: 5, uri: 'assets/dogs/dog5.jpg', species: 'dog' },
+  { id: 6, uri: 'assets/cats/cat1.jpg', species: 'cat' },
+  { id: 7, uri: 'assets/cats/cat2.jpg', species: 'cat' },
+  { id: 8, uri: 'assets/cats/cat3.jpg', species: 'cat' },
+  { id: 9, uri: 'assets/cats/cat4.jpg', species: 'cat' },
+  { id: 10, uri: 'assets/cats/cat5.jpg', species: 'cat' },
+  { id: 11, uri: 'assets/ducks/duck1.jpg', species: 'duck' },
+  { id: 12, uri: 'assets/ducks/duck2.jpg', species: 'duck' },
+  { id: 13, uri: 'assets/ducks/duck3.jpg', species: 'duck' },
+  { id: 14, uri: 'assets/ducks/duck4.jpg', species: 'duck' },
+  { id: 15, uri: 'assets/ducks/duck5.jpg', species: 'duck' },
 ];
 
 @Injectable()
