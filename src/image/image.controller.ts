@@ -6,21 +6,16 @@ import {
   ParseIntPipe,
   Query,
 } from '@nestjs/common';
-import { SPECIES } from './image.interface';
 import { ImageService } from './image.service';
+import { GetRandomDTO } from './image.dto';
 
 @Controller('image')
 export class ImageController {
   constructor(private imageService: ImageService) {}
 
   @Get('/random')
-  getRandom(
-    @Query('species') species?: SPECIES,
-    @Query('count') count?: number,
-  ) {
-    if (!Object.values(SPECIES).includes(species)) {
-      throw new BadRequestException(`Unsupported species: ${species}`);
-    }
+  getRandom(@Query() query?: GetRandomDTO) {
+    const { species, count } = query;
 
     return this.imageService.getRandom(species, count);
   }

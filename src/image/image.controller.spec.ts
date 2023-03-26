@@ -23,14 +23,14 @@ describe('ImageController', () => {
 
   describe('getRandom', () => {
     it('should return an array', async () => {
-      const result = await controller.getRandom();
+      const result = await controller.getRandom({});
 
       expect(result).toBeInstanceOf(Array);
     });
 
     it('should return an array of correct length', async () => {
       const count = 2;
-      const result = await controller.getRandom(null, count);
+      const result = await controller.getRandom({ count });
 
       expect(result.length).toBe(count);
     });
