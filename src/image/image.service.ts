@@ -1,9 +1,10 @@
 import {
+  BadRequestException,
   Injectable,
   NotAcceptableException,
   NotFoundException,
 } from '@nestjs/common';
-import { getRandomInRange } from 'src/utils';
+import { getRandomInRange } from '../utils';
 import { ImageMetadata } from './image.interface';
 
 const stubData = [
@@ -97,7 +98,7 @@ export class ImageService {
     const images = species ? this.getImagesBySpecies(species) : this.images;
 
     if (images.length < count) {
-      throw new NotAcceptableException('Insufficient images for request');
+      throw new BadRequestException('Insufficient images for request');
     }
 
     const indices = getRandomInRange(0, images.length, count);
