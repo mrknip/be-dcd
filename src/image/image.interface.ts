@@ -4,9 +4,3 @@ export interface ImageMetadata {
   species: string;
   description: string;
 }
-
-export enum SPECIES {
-  DOG = 'dog',
-  CAT = 'cat',
-  DUCK = 'duck',
-}

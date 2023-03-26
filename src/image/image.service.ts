@@ -16,7 +16,7 @@ export class ImageService {
     count = 5,
   }: {
     species?: string;
-    count: number;
+    count?: number;
   }) {
     const images = species ? this.getImagesBySpecies(species) : this.images;
 

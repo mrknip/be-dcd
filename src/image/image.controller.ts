@@ -15,9 +15,7 @@ export class ImageController {
 
   @Get('/random')
   getRandom(@Query() query?: GetRandomDTO) {
-    const { species, count } = query;
-
-    return this.imageService.getRandom({ species, count });
+    return this.imageService.getRandom(query);
   }
 
   @Get(':id')

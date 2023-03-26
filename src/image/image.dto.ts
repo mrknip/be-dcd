@@ -1,6 +1,11 @@
 import { IsEnum, IsInt, IsOptional } from 'class-validator';
 import { Transform } from 'class-transformer';
-import { SPECIES } from './image.interface';
+
+export enum SPECIES {
+  DOG = 'dog',
+  CAT = 'cat',
+  DUCK = 'duck',
+}
 
 export class GetRandomDTO {
   @IsEnum(SPECIES)
