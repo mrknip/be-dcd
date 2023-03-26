@@ -13,10 +13,7 @@ export const initImageData = async () => {
         .on('data', (row) => {
           imageData.push(row);
         })
-        .on('end', () => {
-          console.log({ imageData });
-          resolve();
-        })
+        .on('end', () => resolve())
         .on('error', (err) => {
           console.error(err);
           reject();
